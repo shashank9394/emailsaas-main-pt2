@@ -1,5 +1,5 @@
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from "@google/generative-ai";
-import { Message, StreamingTextResponse } from "ai";
+import { Message  } from "ai";
 
 import { NextResponse } from "next/server";
 import { OramaManager } from "@/lib/orama";
@@ -113,7 +113,7 @@ When responding, please keep in mind:
             }
         });
 
-        return new StreamingTextResponse(stream);
+        return null ;
 
     } catch (error) {
         console.error(error);
